@@ -1,6 +1,6 @@
 ---
 - name: Install nginx
-  hosts: localhost
+  hosts: hw1
   become: true
 
   tasks:
@@ -14,14 +14,22 @@
       name: nginx
       state: started
 
+  - name: Create hw1 directory
+    command: mkdir hw1
+
+  - name: Download hw0 from git
+    git:
+      repo: 'https://github.com/derekwang117/CSE-356.git'
+      dest: hw1
+
   - name: Insert Index Page
     copy:
-      src: hw0.html
+      src: hw1/hw0.html
       dest: /var/www/html
 
   - name: Insert Image Page
     copy:
-      src: janna_top.png
+      src: hw1/janna_top.PNG
       dest: /var/www/html
 
   - name: Edit nginx default
