@@ -21,7 +21,7 @@
     command: mv CSE-356/hw0.html /var/www/html
 
   - name: Insert Image Page
-    command: mv CSE-356/janna_top.PNG /var/www/html
+    command: mv CSE-356/ruble.PNG /var/www/html
 
   - name: Edit nginx default
     replace:
