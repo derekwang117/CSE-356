@@ -33,3 +33,5 @@
     service:
       name: nginx
       state: restarted
+
+# for docker, mkdir nginx-html with index.html, then do docker run -d -p 8080:80 -v ~/nginx-html:/usr/share/nginx/html nginx
